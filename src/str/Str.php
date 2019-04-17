@@ -50,7 +50,13 @@ class Str
      */
     public static function str_rand($length,$one='')
     {
-        return $str = self::random_pseudo_bytes(32,16,$one);
+        $str = self::random_pseudo_bytes(32,16,$one);
+        $strlen = strlen($str)-1;
+        $results = '';
+        for($i=1;$i<=$length;$i++){
+            $results  .= $str{mt_rand(0,$strlen)};
+        }
+        return $results;
     }
 
     /**
