@@ -13,7 +13,6 @@ class File
 
     public static function init()
     {
-        return static;
     }
 
 
