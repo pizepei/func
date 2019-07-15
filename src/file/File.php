@@ -11,6 +11,12 @@ namespace pizepei\func\file;
 class File
 {
 
+    public static function init()
+    {
+        return static;
+    }
+
+
     /**
      *  判断目录是否存在
      * 不存在创建

@@ -8,6 +8,8 @@
  */
 namespace pizepei\func;
 
+use pizepei\func\file\File;
+
 class Func
 {
 
@@ -25,7 +27,18 @@ class Func
             return static::$class = 'pizepei\func\\'.$name[0].'\\'.ucfirst($name[0]);
         }
     }
-
+    /**
+     * 使用方法
+     */
+    public static function app()
+    {
+        require ('..'.DIRECTORY_SEPARATOR.__APP__.DIRECTORY_SEPARATOR.'Helper.php');
+        Helper::test();
+    }
+    public static function file()
+    {
+        return File::init();
+    }
     /**
      * 使用方法
      */
